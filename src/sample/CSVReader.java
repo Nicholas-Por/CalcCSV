@@ -1,12 +1,32 @@
 package sample;
 //this will have to change according to how you update the text
 //output file, or rather the CSV file
+import java.io.FileReader;
+import java.util.List;
+import com.opencsv;
+
 public class CSVReader {
-}
-    // Java code to illustrate reading a
-// CSV file line by line
- public static void readDataLineByLine(String file)
-    {
+    private static final String CSV_FILE_PATH
+            = "D:\\EclipseWorkSpace\\CSVOperations\\results.csv";
+   // private static final String CSV_FILE_CUSTOM_SEPERATOR
+           // = "D:\\EclipseWorkSpace\\CSVOperations\\results_semicolon_Seperator.csv";
+
+    public static void main(String[] args) {
+
+        System.out.println("Read Data Line by Line With Header \n");
+        readDataLineByLine(CSV_FILE_PATH);
+        System.out.println("_______________________________________________");
+
+      //  System.out.println("Read All Data at Once and Hide the Header also \n");
+       // readAllDataAtOnce(CSV_FILE_PATH);
+       // System.out.println("_______________________________________________");
+
+        //System.out.println("Custom Seperator here semi-colon\n");
+       // readDataFromCustomSeperator(CSV_FILE_CUSTOM_SEPERATOR);
+       // System.out.println("_______________________________________________");
+    }
+
+    public static void readDataLineByLine(String file) {
 
         try {
 
@@ -26,8 +46,10 @@ public class CSVReader {
                 }
                 System.out.println();
             }
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+}
+
