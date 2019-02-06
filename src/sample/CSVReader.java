@@ -7,7 +7,7 @@ import com.opencsv;
 
 public class CSVReader {
     private static final String CSV_FILE_PATH
-            = "D:\\EclipseWorkSpace\\CSVOperations\\results.csv";
+            = "D:\\EclipseWorkSpace\\CSVOperations\\results.csv"; //(csv data file location)
    // private static final String CSV_FILE_CUSTOM_SEPERATOR
            // = "D:\\EclipseWorkSpace\\CSVOperations\\results_semicolon_Seperator.csv";
 
